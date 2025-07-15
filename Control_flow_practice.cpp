@@ -168,7 +168,7 @@ void Find_Armstrong_number(int n)
     // Space complexity O(1)
 }
 
-// Problem no 7
+// Problem no 8
 // Write a C++ program to input a number and check whether the number is a Perfect number or not.
 
 void Perfect_Number(int n)
