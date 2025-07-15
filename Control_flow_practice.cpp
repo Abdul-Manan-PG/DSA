@@ -140,7 +140,7 @@ void Find_HCF(int a, int b)
     // Space complexity O(1)
 }
 
-// Problem no 6
+// Problem no 7
 // Write a C++ program to input a number from the user and check whether the given number is an Armstrong number or not.
 
 void Find_Armstrong_number(int n)
@@ -166,4 +166,29 @@ void Find_Armstrong_number(int n)
 
     // Time complexity: O(length(n))
     // Space complexity O(1)
+}
+
+// Problem no 7
+// Write a C++ program to input a number and check whether the number is a Perfect number or not.
+
+void Perfect_Number(int n)
+{
+    int sum;
+    for (int i = 1; i <= n / 2; i++)
+    {
+        /* If i is a divisor of num */
+        if (n % i == 0)
+        {
+            sum += i;
+        }
+    }
+
+    if (sum == n && n > 0)
+    {
+        cout << "It is a PERFECT NUMBER";
+    }
+    else
+    {
+        cout << "It is NOT a PERFECT NUMBER";
+    }
 }
