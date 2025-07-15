@@ -192,3 +192,277 @@ void Perfect_Number(int n)
         cout << "It is NOT a PERFECT NUMBER";
     }
 }
+
+// Problem no 9
+// Write a C++ program to input a number from the user and check whether the given number is a strong number or not.
+
+int factorial_no(int n)
+{
+    for (int i = n - 1; i > 1; i--)
+    {
+        n *= i;
+    }
+    return n;
+}
+
+void Strong_No(int n)
+{
+    int a = n;
+    int sum = 0;
+    while (a > 0)
+    {
+        sum += factorial_no(a % 10);
+        a /= 10;
+    }
+    if (sum == n && n > 0)
+    {
+        cout << "It is a Strong NUMBER";
+    }
+    else
+    {
+        cout << "It is NOT a strong NUMBER";
+    }
+}
+
+// Problem no 10
+// print shapes
+
+void print(int n, string shape)
+{
+    if (shape == "hollow_square")
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= n; j++)
+            {
+                if (i == 1 || i == n)
+                    cout << "* ";
+                else if (j == 1 || j == n)
+                    cout << "* ";
+                else
+                    cout << "  ";
+            }
+            cout << endl;
+        }
+    }
+    else if (shape == "hollow_dsquare")
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= n; j++)
+            {
+                if (i == 1 || i == n)
+                    cout << "* ";
+                else if (j == 1 || j == n)
+                    cout << "* ";
+                else if (j == i || j + i == n + 1)
+                    cout << "* ";
+                else
+                    cout << "  ";
+            }
+            cout << endl;
+        }
+    }
+    else if (shape == "rhombus")
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = i; j <= n; j++)
+            {
+                cout << " ";
+            }
+            for (int j = 1; j <= n; j++)
+            {
+                cout << "*";
+            }
+            cout << endl;
+        }
+    }
+    else if (shape == "left-triangle")
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                cout << "*";
+            }
+            cout << endl;
+        }
+    }
+    else if (shape == "right-triangle")
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = i; j <= (i + n); j++)
+            {
+                if (j <= n)
+                    cout << " ";
+                else
+                    cout << "*";
+            }
+            cout << endl;
+        }
+    }
+    else if (shape == "left-hollow-triangle")
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                if (j == 1 || j == i || i == n)
+                    cout << "*";
+                else
+                    cout << " ";
+            }
+            cout << endl;
+        }
+    }
+    else if (shape == "right-hollow-triangle")
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = i; j <= (i + n); j++)
+            {
+                if (j <= n)
+                    cout << " ";
+                else if (j == n + 1 || j == i + n || i == n)
+                    cout << "*";
+                else
+                    cout << " ";
+            }
+            cout << endl;
+        }
+    }
+    else if (shape == "pyramid")
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = i; j <= n; j++)
+            {
+                cout << " ";
+            }
+            for (int j = 1; j <= i + i - 1; j++)
+            {
+                cout << "*";
+            }
+            cout << endl;
+        }
+    }
+    else if (shape == "hollow_pyramid")
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = i; j <= n; j++)
+            {
+                cout << " ";
+            }
+            for (int j = 1; j <= i + i - 1; j++)
+            {
+                if (j == 1 || j == i + i - 1 || i == n)
+                    cout << "*";
+                else
+                    cout << " ";
+            }
+            cout << endl;
+        }
+    }
+    else if (shape == "inverted_pyramid")
+    {
+        for (int i = n; i > 0; i--)
+        {
+            for (int j = i; j <= n; j++)
+            {
+                cout << " ";
+            }
+            for (int j = 1; j <= i + i - 1; j++)
+            {
+                cout << "*";
+            }
+            cout << endl;
+        }
+    }
+    else if (shape == "inverted_hollow_pyramid")
+    {
+        for (int i = n; i > 0; i--)
+        {
+            for (int j = i; j <= n; j++)
+            {
+                cout << " ";
+            }
+            for (int j = 1; j <= i + i - 1; j++)
+            {
+                if (j == 1 || j == i + i - 1 || i == n)
+                    cout << "*";
+                else
+                    cout << " ";
+            }
+            cout << endl;
+        }
+    }
+    else if (shape == "diamond")
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = i; j <= n; j++)
+            {
+                cout << " ";
+            }
+            for (int j = 1; j <= i + i - 1; j++)
+            {
+                cout << "*";
+            }
+            cout << endl;
+        }
+        for (int i = n - 1; i > 0; i--)
+        {
+            for (int j = i; j <= n; j++)
+            {
+                cout << " ";
+            }
+            for (int j = 1; j <= i + i - 1; j++)
+            {
+                cout << "*";
+            }
+            cout << endl;
+        }
+    }
+    else if (shape == "hollow_diamond")
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = i; j <= n; j++)
+            {
+                cout << " ";
+            }
+            for (int j = 1; j <= i + i - 1; j++)
+            {
+                if (j == 1 || j == i + i - 1)
+                    cout << "*";
+                else
+                    cout << " ";
+            }
+            cout << endl;
+        }
+    }
+    for (int i = n - 1; i > 0; i--)
+    {
+        for (int j = i; j <= n; j++)
+        {
+            cout << " ";
+        }
+        for (int j = 1; j <= i + i - 1; j++)
+        {
+            if (j == 1 || j == i + i - 1)
+                cout << "*";
+            else
+                cout << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    print(5, "hollow_diamond");
+    return 0;
+}
