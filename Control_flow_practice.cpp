@@ -191,6 +191,9 @@ void Perfect_Number(int n)
     {
         cout << "It is NOT a PERFECT NUMBER";
     }
+
+        // Time Complexity: O(n)
+        // Space Complexity: O(1)
 }
 
 // Problem no 9
@@ -211,7 +214,7 @@ void Strong_No(int n)
     int sum = 0;
     while (a > 0)
     {
-        sum += factorial_no(a % 10);
+        sum += factorial_no(a % 10); // factorial have complexity of n
         a /= 10;
     }
     if (sum == n && n > 0)
@@ -222,6 +225,9 @@ void Strong_No(int n)
     {
         cout << "It is NOT a strong NUMBER";
     }
+
+        // Time Complexity: O(n^2)
+        // Space Complexity: O(1)
 }
 
 // Problem no 10
@@ -398,6 +404,9 @@ void print(int n, string shape)
             }
             cout << endl;
         }
+
+        // Time Complexity: O(n^2)
+        // Space Complexity: O(1)
     }
     else if (shape == "diamond")
     {
@@ -425,6 +434,9 @@ void print(int n, string shape)
             }
             cout << endl;
         }
+
+        // Time Complexity: O(n^2)
+        // Space Complexity: O(1)
     }
     else if (shape == "hollow_diamond")
     {
@@ -458,6 +470,9 @@ void print(int n, string shape)
             }
             cout << endl;
         }
+
+        // Time Complexity: O(n^2)
+        // Space Complexity: O(1)
     }
     if (shape == "number_pattern_6")
     {
@@ -468,12 +483,15 @@ void print(int n, string shape)
             for (int j = 1; j <= n; j++)
             {
                 if (j <= i)
-                cout << i;
+                    cout << i;
                 else
-                cout << j;
+                    cout << j;
             }
             cout << endl;
         }
+
+        // Time Complexity: O(n^2)
+        // Space Complexity: O(1)
     }
 }
 

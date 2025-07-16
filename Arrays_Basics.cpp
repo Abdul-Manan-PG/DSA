@@ -15,6 +15,9 @@ void printArrayWithIndices(int nums[], int size)
         // Print the value at the current index
         cout << "Value at Index " << index << " is " << nums[index] << endl;
     }
+
+    //Time Complexity: O(n)
+    //Space Complexity: O(1)
 }
 
 // 2. Print Array in Reverse Order
@@ -26,6 +29,9 @@ void printArrayInReverse(int nums[], int size)
         cout << nums[index] << " ";
     }
     cout << endl; // Newline for better output formatting
+
+    //Time Complexity: O(n)
+    //Space Complexity: O(1)
 }
 
 // 3. Print Alternate Elements of an Array
@@ -37,6 +43,9 @@ void printAlternateByIncrement(int nums[], int size)
         cout << nums[index] << " ";
     }
     cout << endl;
+
+    //Time Complexity: O(n)
+    //Space Complexity: O(1)
 }
 
 // 4. Create Duplicate of an Array
@@ -55,6 +64,9 @@ void createAndPrintDuplicate(int nums[], int size, int d_nums[])
     {
         cout << d_nums[index] << " ";
     }
+
+    //Time Complexity: O(n)
+    //Space Complexity: O(n)
 }
 
 // 5. Function to separate odd and even elements
@@ -107,6 +119,9 @@ void separateOddEven(int nums[], int size)
     cout << endl;
     delete odd_nums;
     delete even_nums;
+
+    //Time Complexity: O(n)
+    //Space Complexity: O(n )
 }
 
 // 6. Function to calculate the sum and product of the array
@@ -124,6 +139,9 @@ void calculateSumAndProduct(int nums[], int size)
 
     cout << "Sum: " << sum << endl;
     cout << "Product: " << product << endl;
+
+    //Time Complexity: O(n)
+    //Space Complexity: O(1)
 }
 
 // 7. Function to count occurrences of the target number in the array
@@ -145,6 +163,9 @@ int countOccurrences(int nums[], int size, int target)
 
     // Return the final count
     return count;
+
+    //Time Complexity: O(n)
+    //Space Complexity: O(1)
 }
 
 // 8. Function to check if the array is sorted forward, backward, or not sorted
@@ -183,6 +204,9 @@ string checkSorted(int nums[], int size)
     {
         return "Not Sorted";
     }
+
+    //Time Complexity: O(n)
+    //Space Complexity: O(1)
 }
 
 // 9. Function to count the number of unique and duplicate elements in the array
@@ -220,6 +244,9 @@ void countUniqueAndDuplicates(int nums[], int n)
 
     // Output the results
     cout << unique_count << " " << duplicate_count << endl;
+
+    //Time Complexity: O(n)
+    //Space Complexity: O(n)
 }
 
 // 10. Sum of Pair Equal to Target in Array1
@@ -243,6 +270,9 @@ void hasPairWithSum(int nums[], int n, int target)
         }
     }
     cout << "false";
+
+    //Time Complexity: O(n^3)
+    //Space Complexity: O(1)
 }
 
 // 11. Sum of Triplet Equal to Target in Array
@@ -274,6 +304,9 @@ void hasTripletWithSum(int nums[], int n, int target)
 
     // Print false if no such triplet is found after checking all possibilities
     cout << "false";
+
+    //Time Complexity: O(n^3)
+    //Space Complexity: O(1)
 }
 
 // 12. Function to find the maximum element in the array
@@ -289,6 +322,9 @@ void findMaxElement(int nums[], int n)
         }
     }
     cout << "The maximum element is: " << maxElement << endl;
+
+    //Time Complexity: O(n)
+    //Space Complexity: O(1)
 }
 
 // 13. Function to find the minimum element in the array
@@ -304,6 +340,9 @@ void findMinElement(int nums[], int n)
         }
     }
     cout << "The minimum element is: " << minElement << endl;
+
+    //Time Complexity: O(n)
+    //Space Complexity: O(1)
 }
 
 // 14. Function to find the 2nd maximum element in the array
@@ -329,6 +368,9 @@ void findSecondMaxElement(int nums[], int n)
         }
     }
     cout << secondMaxElement << endl;
+
+    //Time Complexity: O(n)
+    //Space Complexity: O(1)
 }
 
 // 15. Function to find the 2nd minimum element in the array
@@ -355,6 +397,9 @@ void findSecondMinElement(int nums[], int n)
         }
     }
     cout << secondMinElement << endl;
+
+    //Time Complexity: O(n)
+    //Space Complexity: O(1)
 }
 // 16. Insertion at Xth Position 
 
@@ -366,6 +411,9 @@ void insertAtPosition(int *nums, int n, int X, int val) {
 
     // Step 2: Insert the new value at index X
     nums[X] = val;
+
+    //Time Complexity: O(n-x)
+    //Space Complexity: O(1)
 }
 
 // 17. Deletion at Xth Position
@@ -378,6 +426,9 @@ void deleteElementAtIndex(int nums[], int &n, int X) {
     }
     // Reduce the size by 1
     n--;
+
+    //Time Complexity: O(n-x)
+    //Space Complexity: O(1)
 }
 
 // .....................................................................
