@@ -443,26 +443,42 @@ void print(int n, string shape)
             }
             cout << endl;
         }
-    }
-    for (int i = n - 1; i > 0; i--)
-    {
-        for (int j = i; j <= n; j++)
+        for (int i = n - 1; i > 0; i--)
         {
-            cout << " ";
-        }
-        for (int j = 1; j <= i + i - 1; j++)
-        {
-            if (j == 1 || j == i + i - 1)
-                cout << "*";
-            else
+            for (int j = i; j <= n; j++)
+            {
                 cout << " ";
+            }
+            for (int j = 1; j <= i + i - 1; j++)
+            {
+                if (j == 1 || j == i + i - 1)
+                    cout << "*";
+                else
+                    cout << " ";
+            }
+            cout << endl;
         }
-        cout << endl;
+    }
+    if (shape == "number_pattern_6")
+    {
+        int colm;
+        cin >> colm;
+        for (int i = n; i > 0; i--)
+        {
+            for (int j = 1; j <= n; j++)
+            {
+                if (j <= i)
+                cout << i;
+                else
+                cout << j;
+            }
+            cout << endl;
+        }
     }
 }
 
 int main()
 {
-    print(5, "hollow_diamond");
+    print(5, "number_pattern_6");
     return 0;
 }
