@@ -1,5 +1,9 @@
-#include <string>
 #include <iostream>
+#include <string>
+#include <cctype> // for tolower() in task 3
+#include <math.h> // for abs() e.g for absolute value in task 3
+#include <climits> // for INT_MAX in task 7
+
 
 using namespace std;
 
@@ -37,5 +41,215 @@ void Counting(string str){
 // int main()
 // {
 //     Counting("Hello! everyone my passs is 86743");
+//     return 0;
+// }
+
+
+
+// 3 Find the Difference between the Number of Consonants and Vowels in a String
+
+int consonantVowelDifference(const string &s)
+{
+    int vowels = 0, consonants = 0;
+    for (char c : s)
+    {
+        if (isalpha(c))
+        {                             // Check if it's a letter
+            char lowerC = tolower(c); // Convert to lowercase
+            if (lowerC == 'a' || lowerC == 'e' || lowerC == 'i' || lowerC == 'o' || lowerC == 'u')
+            {
+                vowels++;
+            }
+            else
+            {
+                consonants++;
+            }
+        }
+    }
+    return abs(consonants - vowels);
+}
+
+// int main()
+// {
+//     cout << "Difference: " << consonantVowelDifference("Hello world") << endl;
+//     return 0;
+// }
+
+// 4. Convert Uppercase to Lowercase and Vice Versa in a String
+
+char To_upper_or_to_lower(char c){
+    if (c >= 'a' && c <= 'z') 
+    {
+        return c - 32;
+    }
+    if (c >= 'A' && c <= 'Z')
+    {
+        return c + 32;
+    }
+    return c; // return unchanged if it's not lowercase
+}
+
+// int main() 
+// {
+//     // Write C++ code here
+//     cout << To_upper_or_to_lower('a') << endl;
+//     cout << To_upper_or_to_lower('b') << endl;
+//     cout << To_upper_or_to_lower('c') << endl;
+//     cout << To_upper_or_to_lower('X') << endl;
+//     cout << To_upper_or_to_lower('Y') << endl;
+//     cout << To_upper_or_to_lower('Z') << endl;
+
+//     return 0;
+// }
+
+// 5. Remove Leading, Trailing, and Extra Spaces in a String
+
+string removeExtraSpaces(const string &s) {
+    int n = s.length();
+    int start = 0, end = n - 1;
+    
+    // Trim leading spaces
+    while (start <= end && isspace(s[start])) {
+        start++;
+    }
+    
+    // Trim trailing spaces
+    while (end >= start && isspace(s[end])) {
+        end--;
+    }
+    
+    // Remove extra spaces between words
+    string cleaned;
+    bool space = false;
+    for (int i = start; i <= end; i++) {
+        if (isspace(s[i])) {
+            if (!space) {
+                cleaned += ' ';
+                space = true;
+            }
+        } 
+        else {
+            cleaned += s[i];
+            space = false;
+        }
+    }
+    
+    return cleaned;
+}
+
+// int main() {
+//     string input = "   Hello   World!   I am    learning     dsa  ";
+//     string output = removeExtraSpaces(input);
+//     cout << "Cleaned: \"" << output << "\"" << endl;
+//     return 0;
+// }
+
+// 6. Count the Number of Words in a String
+
+int countWords(const string& str) {
+    int count = 0;
+    bool inWord = false;
+
+    for (char ch : str) {
+        if (isspace(ch)) {
+            inWord = false;
+        } else {
+            if (!inWord) {
+                count++;
+                inWord = true;
+            }
+        }
+    }
+
+    return count;
+}
+
+// int main() {
+//     string input = "Count     the number of words in this sentence.";
+//     int wordCount = countWords(input);
+//     cout << "Number of words: " << wordCount << endl;
+
+//     return 0;
+// }
+
+// 7. Find the Maximum and Minimum Occurring Characters in a String
+
+void findMaxMinChar(const string& str) {
+    int freq[256] = {0};  // ASCII character frequency
+
+    // Count frequency of each character
+    for (char ch : str) {
+        freq[(unsigned char)ch]++;
+    }
+
+    char maxChar, minChar;
+    int maxFreq = 0, minFreq = INT_MAX;
+
+    for (int i = 0; i < 256; ++i) {
+        if (freq[i] > 0) {
+            if (freq[i] > maxFreq) {
+                maxFreq = freq[i];
+                maxChar = i;
+            }
+            if (freq[i] < minFreq) {
+                minFreq = freq[i];
+                minChar = i;
+            }
+        }
+    }
+
+    cout << "Maximum occurring character: '" << maxChar << "' (" << maxFreq << " times)" << endl;
+    cout << "Minimum occurring character: '" << minChar << "' (" << minFreq << " time" << (minFreq > 1 ? "s" : "") << ")" << endl;
+}
+
+// int main() {
+//     string input = "Find the maximum and minimum occurring characters";
+//     findMaxMinChar(input);
+//     return 0;
+// }
+
+// 8. Check if There are Two or Three Consecutive Identical Characters in a String
+
+int hasConsecutiveIdentical(const string& str) {
+    int count = 0;
+    for (size_t i = 1; i < str.length(); ++i) {
+        if (str[i] == str[i - 1]) {
+            count++;
+        }
+    }
+    
+    return count;
+}
+
+// int main() {
+//     string input = "hello world";
+//     cout << "line has: " << hasConsecutiveIdentical(input) << " consecutive identical characters"  << endl;
+
+//     return 0;
+// }
+
+// 9. Find the First and Last Index of Occurrence for Each Character in a String
+
+void first_and_last_oc_words(string str){
+    int count = 1;
+    bool new_word = true;
+    for (int i = 0; i < str.length(); i++){
+        if (isalpha(str[i])){
+            if (new_word){
+                new_word = false;
+                cout <<  "word " << count++ << ": start at " << i << " "; 
+            }
+        }
+        else if ((isspace(str[i]) || i == str.length() - 1)){
+                cout << "and ends at " << i - 1 << endl;
+            new_word = true;
+        }
+        if (i == str.length() - 1)
+                cout << "and ends at " << i << endl;
+    }
+}
+
+// int main(){
+//     first_and_last_oc_words("My name is Abdul Manan");
 //     return 0;
 // }
