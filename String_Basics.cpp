@@ -3,6 +3,7 @@
 #include <cctype> // for tolower() in task 3
 #include <math.h> // for abs() e.g for absolute value in task 3
 #include <climits> // for INT_MAX in task 7
+#include <vector> // for letters in task 10
 
 
 using namespace std;
@@ -251,5 +252,148 @@ void first_and_last_oc_words(string str){
 
 // int main(){
 //     first_and_last_oc_words("My name is Abdul Manan");
+//     return 0;
+// }
+
+// 10: Check if a String Contains All Letters from 'a' to 'z'
+
+bool Pangram_check(string str)
+{
+    vector<bool> letters(26, false);
+    for (char c : str){
+        if (isalpha(c)){
+            char lowerchar = tolower(c);
+            letters[lowerchar - 'a'] = true;
+        }
+    }
+    for (bool present : letters){
+        if (!present){
+            return false;
+        }
+    }
+    return true;
+}
+
+// int main() {
+//     string input = "The quick brown fox jumps over the lazy dog";
+//     bool result = Pangram_check(input);
+//     cout << "Is pangram? " << (result ? "Yes" : "No") << endl;
+//     return 0;
+// }
+
+string insertCharacter(const string &s, char c, int k) {
+    string result = s;
+    
+    // Insert at first position
+    if (!result.empty()) {
+        result.insert(0, 1, c);
+    } 
+    else {
+        result += c;
+    }
+    
+    // Insert at last position
+    result += c;
+    
+    // Insert at Kth position (if valid)
+    if (k > 0 && k <= result.length()) {
+        result.insert(k - 1, 1, c);
+    } 
+    else {
+        cout << "Invalid K position. Skipping Kth insertion." << endl;
+    }
+    
+    return result;
+}
+
+// int main() {
+//     string input = "Hello";
+//     char ch = '*';
+//     int k = 3;
+    
+//     string output = insertCharacter(input, ch, k);
+//     cout << "Modified string: " << output << endl;
+    
+//     return 0;
+// }
+
+// 12: Remove the First, Last, and Kth Character from a String 
+
+string removeCharacters(const string &s, int k) {
+    string result = s;
+
+    // Remove first character (if string is not empty)
+    if (!result.empty()) {
+        result.erase(0, 1);
+    } 
+    else {
+        cout << "String is empty. Cannot remove first character." << endl;
+    }
+
+    // Remove last character (if string is not empty)
+    if (!result.empty()) {
+        result.pop_back();
+    }
+    else {
+        cout << "String is empty. Cannot remove last character." << endl;
+    }
+
+    // Remove Kth character (if valid)
+    if (k > 0 && k <= result.length()) {
+        result.erase(k - 1, 1);
+    } 
+    else {
+        cout << "Invalid K position. Skipping Kth removal." << endl;
+    }
+
+    return result;
+}
+
+// int main() {
+//     string input = "HelloWorld";
+//     int k = 3;
+
+//     string output = removeCharacters(input, k);
+//     cout << "Modified string: " << output << endl;
+
+//     return 0;
+// }
+
+// 13. Find a Specific Substring within a String
+
+int find_sub_string(string str, string substring){
+    int n = str.length() - substring.length();
+    if (n < 0){
+        return -1;
+    }
+    for (int i = 0; i <= n ; i++){
+        if (str.substr(i,substring.length()) == substring){
+            return i;
+        }
+    }
+    return -1;
+}
+
+// int main() {
+//     cout << "Index: " <<find_sub_string("Hello World!", "ld!");
+
+//     return 0;
+// }
+
+// 14. Generate All Possible Substrings of a String
+
+void generateSubstrings(const string &s) {
+    int n = s.length();
+    for (int i = 0; i < n; ++i) {
+        for (int j = i; j < n; ++j) {
+            cout << s.substr(i, j - i + 1) << endl;
+        }
+    }
+}
+
+// int main() {
+//     string input = "abc";
+//     cout << "All substrings of \"" << input << "\":" << endl;
+//     generateSubstrings(input);
 //     return 0;
 // }
