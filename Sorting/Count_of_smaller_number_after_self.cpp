@@ -1,3 +1,8 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
 void merge(vector<int>& nums, int left, int mid, int right, vector<int>& count, vector<int>& index, vector<int>& tempIndex) {
     int i = left, j = mid + 1, k = left;
     int rightCount = 0; // Number of elements from the right subarray that are smaller than elements in the left subarray
