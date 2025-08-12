@@ -50,3 +50,26 @@ public:
     }
 };
 
+class Solution2 {
+public:
+    bool canMakeSquare(vector<vector<char>>& grid) {
+        vector<vector<int>> gridno(3, vector<int>(2, 0));
+        for(int i = 0; i < 3; i++){
+            for (int j = 0; j < 2; j++){
+                if (grid[i][j] == grid[i][j+1]){
+                    if (grid[i][j] == 'W') gridno[i][j] = 1;
+                    else gridno[i][j] = -1;
+                }
+                else gridno[i][j] = 0;
+            }
+        }
+        for (int i = 0; i < 2; i++){
+            for (int j = 0; j < 2; j++){
+                if (gridno[i][j] + gridno[i+1][j] != 0){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+};
