@@ -50,6 +50,7 @@ public:
 
         return rootNode;
     }
+    
 private:
     Node_bt* root;
 };
