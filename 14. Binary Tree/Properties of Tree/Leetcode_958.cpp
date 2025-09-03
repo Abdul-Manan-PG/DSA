@@ -3,9 +3,9 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include<14. Binary Tree/TreeNode.h>
 using namespace std;
 
-#include <queue>
 
 class Solution {
 public:
