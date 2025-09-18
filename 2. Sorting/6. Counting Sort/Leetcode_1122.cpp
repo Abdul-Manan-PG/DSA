@@ -2,10 +2,7 @@
 
 #include <iostream>
 #include <vector>
-#include <string>
-using namespace std;
-
-#include <vector>
+#include <unordered_map>
 #include <algorithm>
 using namespace std;
 
@@ -38,6 +35,43 @@ public:
                 count[i]--;
             }
         }
+
+        return result;
+    }
+};
+
+class Solution2 {
+public:
+    vector<int> relativeSortArray(vector<int>& arr1, vector<int>& arr2) {
+        unordered_map<int, int> freq;
+        for (int num : arr1) {
+            freq[num]++;  // count frequency of each number
+        }
+
+        vector<int> result;
+
+        // Add elements from arr2 first, in order
+        for (int num : arr2) {
+            while (freq[num] > 0) {
+                result.push_back(num);
+                freq[num]--;
+            }
+        }
+
+        // Collect remaining elements
+        vector<int> remaining;
+        for (auto &p : freq) {
+            while (p.second > 0) {
+                remaining.push_back(p.first);
+                p.second--;
+            }
+        }
+
+        // Sort remaining in ascending order
+        sort(remaining.begin(), remaining.end());
+
+        // Append remaining to result
+        result.insert(result.end(), remaining.begin(), remaining.end());
 
         return result;
     }
