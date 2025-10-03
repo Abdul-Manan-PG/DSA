@@ -50,6 +50,23 @@ public:
         }
         cout << endl;
     }
+
+    void DFS_helper(int u, vector<bool>& vis){
+        cout << u << ' ';
+        vis[u] = true;
+
+        for (int neighbor : l[u]){
+            if (!vis[neighbor]){
+                DFS_helper(neighbor, vis);
+            }
+        }
+    }
+    void DFS(){
+        vector<bool> vis(V, false);
+        cout << "DFS traversal: ";
+        DFS_helper(0, vis);
+        cout << endl;
+    }
 };
 
 int main() {
@@ -57,11 +74,12 @@ int main() {
     g.addEgde(0, 1);
     g.addEgde(1, 2);
     g.addEgde(1, 3);
-    g.addEgde(2, 3);
     g.addEgde(2, 4);
 
     g.print();
 
     g.BFS();
+
+    g.DFS();
     return 0;
 }
