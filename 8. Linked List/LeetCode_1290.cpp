@@ -5,24 +5,32 @@
 #include <string>
 using namespace std;
 
-struct ListNode {
+struct ListNode
+{
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
-class Solution {
+
+class Solution
+{
 public:
-    int getDecimalValue(ListNode* head) {
+    int getDecimalValue(ListNode *head)
+    {
         string s = "";
-        while (head != nullptr) {
+        while (head != nullptr)
+        {
             s += to_string(head->val);
             head = head->next;
         }
-        if (s == "" || s == "0") return 0;
+        if (s == "" || s == "0")
+            return 0;
         int result = 0;
         int twos = 1;
-        for (int i = s.length() - 1; i >= 0; i--) {
-            if (s[i] == '1') {
+        for (int i = s.length() - 1; i >= 0; i--)
+        {
+            if (s[i] == '1')
+            {
                 result += twos;
             }
             twos *= 2;
