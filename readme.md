@@ -16,32 +16,6 @@ Each folder is focused on a specific topic along with problem-solving implementa
 
 ---
 
-## 📂 Repository Structure
-
-Each topic has its own folder with implementations and LeetCode practice problems.
-
-| Topic | Notes |
-|-------|------|
-| 1. DSA Fundamentals | Daily practice |
-| 2. Sorting | Covered |
-| 3. Two Pointers | LeetCode-based |
-| 4. Prefix Sum | Completed |
-| 10. Queue | Implemented & practiced |
-| 11. Binary Search | LeetCode problems |
-| 12. Bit Manipulation | Practicing regularly |
-| 13. Recursion & Backtracking | Problem-based |
-| 14. Binary Tree | Basics covered |
-| 15. Binary Search Tree | DSA focus |
-| 16. Heap / Priority Queue | Intro problems |
-| 18. Greedy | LeetCode methods |
-| 19. Dynamic Programming | LeetCode 70+ |
-| 20. Graphs | In progress |
-| 22. Game Theory | LeetCode concepts |
-
-> Each folder contains C++ source files named based on their problem or topic.
-
----
-
 ## 🛠 Languages Used
 
 | Language | Percentage |
