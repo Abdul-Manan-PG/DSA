@@ -1,4 +1,17 @@
-// 109. Sorted Linked List into BST
+// 109. Convert Sorted List to Binary Search Tree
+// Problem:
+// Given the head of a singly linked list where elements are sorted in ascending order,
+// convert it to a height-balanced BST.
+//
+// Link: `https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/`
+//
+// Constraints (LeetCode):
+// - The number of nodes is in the range [0, 2 * 10^4]
+// - -10^5 <= Node.val <= 10^5
+//
+// Expected Complexity:
+// - Array conversion + build: Time O(n), Space O(n) for array
+// - Fast/slow + recursion: Time O(n log n) naive, optimized O(n) with in-order traversal
 
 #include <iostream>
 #include <vector>
@@ -15,6 +28,10 @@ struct ListNode
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
+// Solution1 Complexity (Array + build):
+// - Time: O(n)
+// - Space: O(n)
+
 struct TreeNode
 {
     int val;
@@ -24,6 +41,10 @@ struct TreeNode
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
+
+// Solution2 Complexity (Two-pointer middle + recursion):
+// - Time: O(n log n) in general; with careful in-order pointer walk can be O(n)
+// - Space: O(log n) recursion
 
 class Solution1
 {

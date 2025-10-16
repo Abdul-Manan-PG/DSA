@@ -1,4 +1,17 @@
-// 83. Remove duplicates from Linked List
+// 83. Remove Duplicates from Sorted List
+// Problem:
+// Given the head of a sorted linked list, delete all duplicates such that each element appears only once.
+// Return the linked list sorted as well.
+//
+// Link: `https://leetcode.com/problems/remove-duplicates-from-sorted-list/`
+//
+// Constraints (LeetCode):
+// - The number of nodes in the list is in the range [0, 300]
+// - -100 <= Node.val <= 100
+//
+// Expected Complexity:
+// - Time: O(n)
+// - Space: O(1)
 
 #include <iostream>
 #include <vector>
@@ -10,6 +23,10 @@ struct ListNode {
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
+
+// Solution Complexity:
+// - Time: O(n)
+// - Space: O(1)
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {

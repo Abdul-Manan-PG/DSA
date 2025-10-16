@@ -1,4 +1,16 @@
-// Problem no 912: Sort an array
+// 912. Sort an Array
+// Problem:
+// Given an array of integers nums, sort the array in ascending order and return it.
+//
+// Link: `https://leetcode.com/problems/sort-an-array/`
+//
+// Constraints (LeetCode):
+// - 1 <= nums.length <= 5 * 10^4
+// - -5 * 10^4 <= nums[i] <= 5 * 10^4
+//
+// Expected Complexity (QuickSort implementation):
+// - Average Time: O(n log n), Worst Time: O(n^2) (depending on pivot)
+// - Space: O(log n) recursion stack (average), O(n) worst-case
 
 #include <iostream>
 #include <vector>
@@ -32,3 +44,7 @@ public:
         return nums;
     }
 };
+
+// Solution Complexity (this QuickSort):
+// - Average Time: O(n log n), Worst Time: O(n^2)
+// - Space: O(log n) average (recursion), O(n) worst-case

@@ -1,4 +1,23 @@
-// 451. Sort characters by frequency
+// 451. Sort Characters by Frequency
+// Problem:
+// Given a string s, sort it in decreasing order based on the frequency of the characters.
+// The frequency of a character is the number of times it appears in the string.
+// Return the sorted string. If there are multiple answers, return any of them.
+//
+// Link: `https://leetcode.com/problems/sort-characters-by-frequency/`
+//
+// Constraints (LeetCode):
+// - 1 <= s.length <= 5 * 10^5
+// - s consists of uppercase/lowercase English letters and digits.
+//
+// Expected Complexity (bucket approach):
+// - Time: O(n + U + B) ~ O(n), where U is number of unique chars, B is max frequency
+// - Space: O(n + U)
+//
+// Sample Test Cases:
+// 1) Input: s = "tree" -> Output: "eert" or "eetr"
+// 2) Input: s = "cccaaa" -> Output: "cccaaa" or "aaaccc"
+// 3) Input: s = "Aabb" -> Output: "bbAa" or "bbaA"
 
 #include <iostream>
 #include <vector>
@@ -32,3 +51,7 @@ public:
         return result;
     }
 };
+
+// Solution Complexity:
+// - Time: O(n)
+// - Space: O(n)

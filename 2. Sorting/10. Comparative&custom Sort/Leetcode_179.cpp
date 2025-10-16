@@ -1,4 +1,18 @@
 // 179. Largest Number
+// Problem:
+// Given a list of non-negative integers nums, arrange them such that they form the largest number.
+// Return the result as a string.
+//
+// Link: `https://leetcode.com/problems/largest-number/`
+//
+// Constraints (LeetCode):
+// - 1 <= nums.length <= 100
+// - 0 <= nums[i] <= 10^9
+//
+// Expected Complexity:
+// - Sorting with custom comparator: Time O(n log n * k), where k is max digits length
+// - Building result: O(n)
+// - Space: O(n) for string representations
 
 #include <iostream>
 #include <vector>
@@ -63,3 +77,7 @@ int main() {
     
     return 0;
 }
+
+// Solution Complexity:
+// - Time: O(n log n * k)
+// - Space: O(n)

@@ -1,4 +1,17 @@
-// GFG. Add 1 to a Linked List Number
+// GFG: Add 1 to a Linked List Number
+// Problem:
+// Given a non-negative number represented as a linked list of digits. The head node contains the most significant digit.
+// Add 1 to the number and return the resulting list.
+//
+// Link: `https://www.geeksforgeeks.org/problems/add-1-to-a-number-represented-as-linked-list/1`
+//
+// Constraints (GFG typical):
+// - 1 <= N <= 10^5
+// - 0 <= Node.data <= 9
+//
+// Expected Complexity (recursive carry-propagation):
+// - Time: O(n)
+// - Space: O(n) recursion
 
 #include <iostream>
 #include <vector>
@@ -13,6 +26,10 @@ struct Node{
         next= NULL;
     }
 };
+
+// Solution Complexity:
+// - Time: O(n)
+// - Space: O(n)
 
 class Solution {
   public:

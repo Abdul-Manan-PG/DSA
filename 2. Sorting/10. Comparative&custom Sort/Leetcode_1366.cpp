@@ -1,4 +1,21 @@
-// 1366. Rank teams by votes
+// 1366. Rank Teams by Votes
+// Problem:
+// In a special ranking system, each voter gives a rank from highest to lowest to all teams.
+// The votes array contains all such rankings. Rank the teams based on the votes following:
+// higher counts at rank 1 are better, then rank 2, and so on; ties broken alphabetically.
+//
+// Link: `https://leetcode.com/problems/rank-teams-by-votes/`
+//
+// Constraints (LeetCode):
+// - 1 <= votes.length <= 1000
+// - 1 <= votes[i].length <= 26
+// - votes[i] are permutations of uppercase English letters (teams are unique per vote)
+//
+// Expected Complexity:
+// - Counting votes: O(V * T) where V = number of votes, T = teams per vote
+// - Sorting with comparator: O(T log T * T) in worst case due to T-level comparison
+// - Overall: O(V*T + T^2 log T)
+// - Space: O(T^2)
 
 #include <iostream>
 #include <vector>
@@ -48,3 +65,7 @@ int main(){
     cout << sol.rankTeams(votes); // Output: "ACB" (since A has the most 1st-place votes)
     return 0;
 }
+
+// Solution Complexity:
+// - Time: O(V*T + T^2 log T)
+// - Space: O(T^2)

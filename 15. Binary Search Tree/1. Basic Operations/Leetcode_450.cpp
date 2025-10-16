@@ -1,4 +1,16 @@
-// 450. Delete Node in BST
+// 450. Delete Node in a BST
+// Problem:
+// Given a root node reference of a BST and a key, delete the node with the given key in the BST.
+// Return the root node reference of the BST (possibly updated).
+//
+// Link: `https://leetcode.com/problems/delete-node-in-a-bst/`
+//
+// Constraints (LeetCode):
+// - The number of nodes in the tree is in the range [0, 10^4].
+// - -10^5 <= Node.val <= 10^5
+//
+// Expected Complexity:
+// - Deletion by BST rules: Time O(h), Space O(h) recursion or O(1) iterative
 
 #include <iostream>
 #include <vector>
@@ -14,6 +26,10 @@ struct TreeNode
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
+
+// Solution1 Complexity (Recursive with in-order successor handling):
+// - Time: O(h)
+// - Space: O(h)
 
 class Solution1
 {
@@ -80,6 +96,10 @@ public:
         }
     }
 };
+
+// Solution2 Complexity (Recursive, clean version):
+// - Time: O(h)
+// - Space: O(h)
 
 class Solution2 // clean version
 {

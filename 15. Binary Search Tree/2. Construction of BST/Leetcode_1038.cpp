@@ -1,4 +1,17 @@
-// 1038. BST to Greater sum Tree
+// 1038. Binary Search Tree to Greater Sum Tree
+// Problem:
+// Given the root of a Binary Search Tree (BST), convert it to a Greater Sum Tree such that
+// every key of the original BST is changed to the original key plus sum of all keys greater than it.
+//
+// Link: `https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/`
+//
+// Constraints (LeetCode):
+// - The number of nodes in the tree is in the range [1, 100].
+// - -10^4 <= Node.val <= 10^4
+//
+// Expected Complexity:
+// - Reverse inorder traversal or Morris variant: Time O(n)
+// - Space: O(h) recursion or O(1) for Morris traversal
 
 #include <iostream>
 #include <vector>
@@ -14,6 +27,10 @@ struct TreeNode
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
+
+// Solution1 Complexity (Reverse inorder recursion):
+// - Time: O(n)
+// - Space: O(h)
 
 class Solution1 // 100% time beat
 {
@@ -31,6 +48,10 @@ public:
         return root;
     }
 };
+
+// Solution2 Complexity (Morris reverse inorder):
+// - Time: O(n)
+// - Space: O(1)
 
 class Solution2
 {

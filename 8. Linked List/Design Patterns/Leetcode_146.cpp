@@ -1,4 +1,23 @@
-// 146. LRU cache
+// 146. LRU Cache
+// Problem:
+// Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
+// Implement the LRUCache class with:
+// - LRUCache(int capacity)
+// - int get(int key)
+// - void put(int key, int value)
+// The functions should run in O(1) average time.
+//
+// Link: `https://leetcode.com/problems/lru-cache/`
+//
+// Constraints (LeetCode):
+// - 1 <= capacity <= 3000
+// - 0 <= key, value <= 10^4
+// - At most 2 * 10^5 calls will be made to get and put.
+//
+// Expected Complexity (hash map + doubly linked list):
+// - get: O(1) average
+// - put: O(1) average
+// - Space: O(capacity)
 
 #include <iostream>
 #include <vector>
@@ -78,3 +97,8 @@ public:
         }
     }
 };
+
+// Solution Complexity:
+// - get: O(1) average
+// - put: O(1) average
+// - Space: O(capacity)

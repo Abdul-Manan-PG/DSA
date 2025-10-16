@@ -1,4 +1,20 @@
-// 922. sort array by parity II
+// 922. Sort Array By Parity II
+// Problem:
+// Given an array of integers nums of even length, return an array such that:
+// - Every element at an even index is even, and
+// - Every element at an odd index is odd.
+//
+// Link: `https://leetcode.com/problems/sort-array-by-parity-ii/`
+//
+// Constraints (LeetCode):
+// - 2 <= nums.length <= 2 * 10^4
+// - nums.length is even
+// - 0 <= nums[i] <= 1000
+// - There are as many even numbers as odd numbers in nums
+//
+// Expected Complexity:
+// - Time: O(n)
+// - Space: O(1)
 
 #include <iostream>
 #include <vector>
@@ -48,3 +64,7 @@ public:
         return nums;
     }
 };
+
+// Solution Complexity:
+// - Time: O(n)
+// - Space: O(1)

@@ -1,4 +1,17 @@
-// 2956. Find common elements between Two arrays
+// 2956. Find Common Elements Between Two Arrays
+// Problem:
+// Given two integer arrays nums1 and nums2, return an array answer of length 2 where:
+// answer[0] is the number of elements in nums1 that are present in nums2, and
+// answer[1] is the number of elements in nums2 that are present in nums1.
+//
+// Link: `https://leetcode.com/problems/find-common-elements-between-two-arrays/`
+//
+// Constraints (LeetCode):
+// - 1 <= nums1.length, nums2.length <= 100
+// - 1 <= nums1[i], nums2[i] <= 100
+//
+// Expected Complexity:
+// - Using sets/maps: Time O(n + m), Space O(n + m)
 
 #include <iostream>
 #include <vector>
@@ -33,6 +46,10 @@ public:
         return {answer1, answer2};
     }
 };
+
+// Solution1 Complexity (unordered_set lookup):
+// - Time: O(n + m)
+// - Space: O(n + m)
 
 class Solution2 {
 public:
@@ -71,6 +88,10 @@ public:
     }
 };
 
+// Solution2 Complexity (unordered_map frequency):
+// - Time: O(n + m)
+// - Space: O(n + m)
+
 class Solution3 {
 public:
     vector<int> findIntersectionValues(vector<int>& nums1, vector<int>& nums2) {
@@ -93,3 +114,7 @@ public:
         return {answer1, answer2};
     }
 };
+
+// Solution3 Complexity (unordered_map boolean presence):
+// - Time: O(n + m)
+// - Space: O(n + m)

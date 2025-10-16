@@ -1,4 +1,25 @@
 // 1122. Relative Sort Array
+// Problem:
+// Given two arrays arr1 and arr2, the elements of arr2 are distinct, and all elements
+// in arr2 are present in arr1. Sort the elements of arr1 such that the relative order
+// of items in arr1 are the same as in arr2. Elements that do not appear in arr2 should
+// be placed at the end of arr1 in ascending order.
+//
+// Link: `https://leetcode.com/problems/relative-sort-array/`
+//
+// Constraints (LeetCode):
+// - 1 <= arr1.length, arr2.length <= 1000
+// - 0 <= arr1[i], arr2[i] <= 1000
+// - All elements of arr2 are distinct.
+// - Each element in arr2 appears in arr1.
+//
+// Expected Complexity:
+// - Counting sort solution (Solution1): Time O(n + K), Space O(K) where K = max(arr1)
+// - Map + sort solution (Solution2): Time O(n log n), Space O(n)
+//
+// Sample Test Case:
+// Input:  arr1 = [2,3,1,3,2,4,6,7,9,2,19], arr2 = [2,1,4,3,9,6]
+// Output: [2,2,2,1,4,3,3,9,6,7,19]
 
 #include <iostream>
 #include <vector>
@@ -40,6 +61,11 @@ public:
     }
 };
 
+// Solution1 Complexity (Counting Sort):
+// - Time: O(n + K), where K = max(arr1)
+// - Space: O(K)
+
+
 class Solution2 {
 public:
     vector<int> relativeSortArray(vector<int>& arr1, vector<int>& arr2) {
@@ -76,3 +102,7 @@ public:
         return result;
     }
 };
+
+// Solution2 Complexity (HashMap + Sort Remaining):
+// - Time: O(n log n)
+// - Space: O(n)

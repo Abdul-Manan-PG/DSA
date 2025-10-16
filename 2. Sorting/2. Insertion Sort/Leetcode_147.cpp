@@ -1,4 +1,30 @@
 // 147. Insertion sort list 
+// Problem:
+// Given the head of a singly linked list, sort the list in ascending order using
+// the insertion sort algorithm and return the head of the sorted list.
+//
+// Link: `https://leetcode.com/problems/insertion-sort-list/`
+//
+// Constraints (LeetCode):
+// - The number of nodes n is in the range [1, 5 * 10^4].
+// - -5000 <= Node.val <= 5000
+// - The list may contain duplicate values.
+//
+// Expected Complexity:
+// - Time: O(n^2) in the worst case (standard insertion sort on linked list)
+// - Space: O(1) extra space
+//
+// Sample Test Cases:
+// 1) Input: head = [-1, 5, 3, 4, 0]
+//    Output: [-1, 0, 3, 4, 5]
+// 2) Input: head = [4, 2, 1, 3]
+//    Output: [1, 2, 3, 4]
+// 3) Input: head = []
+//    Output: []
+// 4) Input: head = [1]
+//    Output: [1]
+// 5) Input: head = [1,1,1]
+//    Output: [1,1,1]
 
 #include <iostream>
 #include <vector>
@@ -86,3 +112,8 @@ int main() {
     
     return 0;
 }
+
+// Solution Complexity:
+// - Time: O(n^2)
+// - Space: O(1)
+//

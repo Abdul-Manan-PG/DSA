@@ -1,3 +1,17 @@
+// 70. Climbing Stairs
+// Problem:
+// You are climbing a staircase. It takes n steps to reach the top.
+// Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+//
+// Link: `https://leetcode.com/problems/climbing-stairs/`
+//
+// Constraints (LeetCode):
+// - 1 <= n <= 45
+//
+// Expected Complexity:
+// - Memoized recursion: Time O(n), Space O(n)
+// - Bottom-up DP: Time O(n), Space O(n)
+// - Iterative two-variables: Time O(n), Space O(1)
 #include <iostream>
 #include <vector>
 #include <unordered_map>
@@ -23,6 +37,10 @@ public:
     }
 };
 
+// Solution1 Complexity (Memoization):
+// - Time: O(n)
+// - Space: O(n)
+
 class Solution2
 {
 public:
@@ -44,6 +62,10 @@ public:
     }
 };
 
+// Solution2 Complexity (Bottom-up DP):
+// - Time: O(n)
+// - Space: O(n)
+
 class Solution3 {
 public:
     int climbStairs(int n) {
@@ -59,3 +81,7 @@ public:
         return curr;
     }
 };
+
+// Solution3 Complexity (Iterative O(1) space):
+// - Time: O(n)
+// - Space: O(1)

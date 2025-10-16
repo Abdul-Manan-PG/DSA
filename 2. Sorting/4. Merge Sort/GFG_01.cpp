@@ -1,4 +1,17 @@
-// GFG_01. Count Inversions
+// GFG. Count Inversions
+// Problem:
+// Given an array of integers. Find the inversion count in the array. Two elements a[i]
+// and a[j] form an inversion if a[i] > a[j] and i < j.
+//
+// Link: `https://www.geeksforgeeks.org/problems/inversion-of-array-1587115620/1`
+//
+// Constraints (GFG typical):
+// - 1 <= N <= 10^5
+// - 1 <= arr[i] <= 10^9
+//
+// Expected Complexity (merge sort based):
+// - Time: O(n log n)
+// - Space: O(n)
 
 
 #include <vector>
@@ -57,3 +70,7 @@ int main() {
     // Output: Number of inversions: 2
     return 0;
 }
+
+// Solution Complexity:
+// - Time: O(n log n)
+// - Space: O(n)

@@ -1,4 +1,18 @@
-// 538. Convert BST into Greater Tree
+// 538. Convert BST to Greater Tree
+// Problem:
+// Given the root of a Binary Search Tree (BST), convert it to a Greater Tree such that
+// the value of every node is changed to the original value plus the sum of values
+// of all nodes greater than it.
+//
+// Link: `https://leetcode.com/problems/convert-bst-to-greater-tree/`
+//
+// Constraints (LeetCode):
+// - The number of nodes in the tree is in the range [0, 10^4].
+// - -10^4 <= Node.val <= 10^4
+//
+// Expected Complexity:
+// - Reverse inorder traversal or Morris variant: Time O(n)
+// - Space: O(h) recursion or O(1) with Morris
 
 #include <iostream>
 #include <vector>
@@ -14,6 +28,10 @@ struct TreeNode
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
+
+// Solution1 Complexity (Reverse inorder recursion):
+// - Time: O(n)
+// - Space: O(h)
 
 class Solution1 // 100% time beat
 {
@@ -31,6 +49,10 @@ public:
         return root;
     }
 };
+
+// Solution2 Complexity (Morris traversal):
+// - Time: O(n)
+// - Space: O(1)
 
 class Solution2 {
 public:

@@ -1,4 +1,16 @@
 // 217. Contains Duplicate
+// Problem:
+// Given an integer array nums, return true if any value appears at least twice in the array,
+// and return false if every element is distinct.
+//
+// Link: `https://leetcode.com/problems/contains-duplicate/`
+//
+// Constraints (LeetCode):
+// - 1 <= nums.length <= 10^5
+// - -10^9 <= nums[i] <= 10^9
+//
+// Expected Complexity:
+// - Hash-based detection: Time O(n), Space O(n)
 
 #include <iostream>
 #include <vector>
@@ -22,6 +34,10 @@ public:
     }
 };
 
+// Solution1 Complexity (unordered_map presence check):
+// - Time: O(n)
+// - Space: O(n)
+
 class Solution2 {
 public:
     bool containsDuplicate(vector<int>& nums) {
@@ -35,3 +51,7 @@ public:
         return false;
     }
 };
+
+// Solution2 Complexity (unordered_set presence check):
+// - Time: O(n)
+// - Space: O(n)

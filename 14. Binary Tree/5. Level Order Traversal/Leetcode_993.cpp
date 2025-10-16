@@ -1,4 +1,17 @@
 // 993. Cousins in Binary Tree
+// Problem:
+// Given the root of a binary tree with unique values and the values of two different nodes x and y,
+// determine whether the nodes corresponding to the values x and y are cousins.
+// Two nodes are cousins if they are on the same depth but have different parents.
+//
+// Link: `https://leetcode.com/problems/cousins-in-binary-tree/`
+//
+// Constraints (LeetCode):
+// - The number of nodes in the tree is in the range [1, 100].
+// - 1 <= Node.val <= 100
+//
+// Expected Complexity:
+// - BFS level-order: Time O(n), Space O(n)
 
 #include <iostream>
 #include <vector>
@@ -55,6 +68,10 @@ public:
     }
 };
 
+// Solution1 Complexity (BFS with parent tracking):
+// - Time: O(n)
+// - Space: O(n)
+
 
 class Solution2 {
 public:
@@ -103,3 +120,7 @@ public:
         return or1 == or2;
     }
 };
+
+// Solution2 Complexity (BFS with sibling check):
+// - Time: O(n)
+// - Space: O(n)

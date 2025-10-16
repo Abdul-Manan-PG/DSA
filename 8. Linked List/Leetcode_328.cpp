@@ -1,4 +1,18 @@
 // 328. Odd Even Linked List
+// Problem:
+// Given the head of a singly linked list, group all the nodes with odd indices together followed by
+// the nodes with even indices, and return the reordered list. The first node is considered odd.
+//
+// Link: `https://leetcode.com/problems/odd-even-linked-list/`
+//
+// Constraints (LeetCode):
+// - n == number of nodes in the linked list
+// - 0 <= n <= 10^4
+// - -10^6 <= Node.val <= 10^6
+//
+// Expected Complexity:
+// - Time: O(n)
+// - Space: O(1)
 
 #include <iostream>
 #include <vector>
@@ -14,6 +28,10 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
+
+// Solution Complexity:
+// - Time: O(n)
+// - Space: O(1)
 
 
 class Solution {

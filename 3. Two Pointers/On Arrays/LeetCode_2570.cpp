@@ -1,4 +1,18 @@
 // 2570. Merge Two 2D Arrays by Summing Values
+// Problem:
+// You are given two 2D integer arrays nums1 and nums2, where each array has the form [id, val] and is sorted by id.
+// Merge the arrays by adding values with the same id, and return the result sorted by id.
+//
+// Link: `https://leetcode.com/problems/merge-two-2d-arrays-by-summing-values/`
+//
+// Constraints (LeetCode):
+// - 1 <= nums1.length, nums2.length <= 200
+// - nums1[i].length == nums2[j].length == 2
+// - ids are unique within each array and arrays are sorted by id
+//
+// Expected Complexity (two-pointer merge):
+// - Time: O(n + m)
+// - Space: O(n + m) for result
 
 #include <iostream>
 #include <vector>
@@ -72,3 +86,7 @@ int main() {
 
     return 0;
 }
+
+// Solution Complexity:
+// - Time: O(n + m)
+// - Space: O(n + m)

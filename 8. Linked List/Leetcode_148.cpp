@@ -1,4 +1,17 @@
 // 148. Sort List
+// Problem:
+// Given the head of a linked list, return the list after sorting it in ascending order.
+//
+// Link: `https://leetcode.com/problems/sort-list/`
+//
+// Constraints (LeetCode):
+// - The number of nodes in the list is in the range [0, 5 * 10^4].
+// - -10^5 <= Node.val <= 10^5
+// - The list is not necessarily sorted initially.
+//
+// Expected Complexity (merge sort on linked list):
+// - Time: O(n log n)
+// - Space: O(log n) recursion stack
 
 #include <iostream>
 #include <vector>
@@ -13,6 +26,10 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
+
+// Solution Complexity (merge sort):
+// - Time: O(n log n)
+// - Space: O(log n)
 
 class Solution {
 public:

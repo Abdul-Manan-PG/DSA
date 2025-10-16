@@ -1,4 +1,17 @@
-// 1008. Contruct BST from PreOrder Traversal
+// 1008. Construct Binary Search Tree from Preorder Traversal
+// Problem:
+// Given an array of integers preorder, representing the preorder traversal of a BST,
+// construct the tree and return its root.
+//
+// Link: `https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/`
+//
+// Constraints (LeetCode):
+// - 1 <= preorder.length <= 100
+// - 1 <= preorder[i] <= 10^8 (values are distinct)
+//
+// Expected Complexity:
+// - Bound method: Time O(n), Space O(h)
+// - Stack method: Time O(n), Space O(h)
 
 #include <iostream>
 #include <vector>
@@ -14,6 +27,10 @@ struct TreeNode
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
+
+// Solution1 Complexity (Bounded recursion):
+// - Time: O(n)
+// - Space: O(h)
 
 class Solution1
 {
@@ -39,6 +56,10 @@ public:
         return helper(preorder, i, INT_MAX);
     }
 };
+
+// Solution2 Complexity (Monotonic stack):
+// - Time: O(n)
+// - Space: O(h)
 
 class Solution2
 {

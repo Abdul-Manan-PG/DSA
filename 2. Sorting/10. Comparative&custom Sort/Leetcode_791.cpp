@@ -1,4 +1,26 @@
-// 791. Custom sort string
+// 791. Custom Sort String
+// Problem:
+// Given two strings order and s. Order is a permutation of the lowercase letters.
+// Reorder the characters of s so that they match the order given in order. Characters
+// not in order can be placed anywhere at the end. Return any valid answer.
+//
+// Link: `https://leetcode.com/problems/custom-sort-string/`
+//
+// Constraints (LeetCode):
+// - 1 <= order.length <= 26
+// - 1 <= s.length <= 200
+// - order and s consist of lowercase English letters.
+//
+// Expected Complexity (typical hashmap approach):
+// - Time: O(|order| + |s|)
+// - Space: O(1) for alphabet-sized counts
+//
+// Note on this implementation:
+// - Uses index collection and erase; worst-case can be higher due to repeated erasures.
+//
+// Sample Test Cases:
+// 1) order = "cba", s = "abcd" -> "cbad"
+// 2) order = "bcafg", s = "abcd" -> "bcad"
 
 #include <iostream>
 #include <vector>
@@ -72,3 +94,7 @@ int main() {
     
     return 0;
 }
+
+// Solution Complexity (typical approach):
+// - Time: O(|order| + |s|)
+// - Space: O(1) for fixed alphabet counts

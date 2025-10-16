@@ -1,4 +1,17 @@
-// 701. Insert Into a Binary Search Tree
+// 701. Insert into a Binary Search Tree
+// Problem:
+// You are given the root node of a binary search tree (BST) and a value to insert into the tree.
+// Insert the value and return the root node of the BST. The insertion must maintain the BST property.
+//
+// Link: `https://leetcode.com/problems/insert-into-a-binary-search-tree/`
+//
+// Constraints (LeetCode):
+// - The number of nodes in the tree is in the range [0, 10^4].
+// - -10^8 <= Node.val <= 10^8
+// - All the values Node.val are unique.
+//
+// Expected Complexity:
+// - Iterative or recursive insertion: Time O(h), Space O(1) iterative or O(h) recursion
 
 #include <iostream>
 #include <vector>
@@ -14,6 +27,10 @@ struct TreeNode
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
+
+// Solution1 Complexity (Iterative insertion):
+// - Time: O(h)
+// - Space: O(1)
 
 class Solution1
 {
@@ -45,6 +62,10 @@ public:
         return root;
     }
 };
+
+// Solution2 Complexity (Recursive insertion):
+// - Time: O(h)
+// - Space: O(h)
 
 class Solution2
 {

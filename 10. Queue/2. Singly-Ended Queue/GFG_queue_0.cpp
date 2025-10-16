@@ -1,4 +1,18 @@
-// Geek for geeks: Reverse first k elements from the Queue
+// GFG: Reverse First K Elements of Queue
+// Problem:
+// Given a queue of integers and an integer k, reverse the order of the first k elements of the queue,
+// leaving the other elements in the same relative order. The queue should be modified in-place.
+//
+// Link: `https://www.geeksforgeeks.org/problems/reverse-first-k-elements-of-queue/1`
+//
+// Constraints (GFG typical):
+// - 1 <= N <= 10^5
+// - 1 <= k <= N
+// - 1 <= queue[i] <= 10^9
+//
+// Expected Complexity:
+// - Stack-based reversal: Time O(n), Space O(k)
+// - Recursive reversal: Time O(n), Space O(k) recursion
 
 #include <iostream>
 #include <queue>
@@ -30,6 +44,10 @@ class Solution1 {
         return ret;
     }
 };
+
+// Solution1 Complexity (Stack-based):
+// - Time: O(n)
+// - Space: O(k)
 
 
 class Solution2 {
@@ -68,3 +86,7 @@ public:
         return q;
     }
 };
+
+// Solution2 Complexity (Recursive):
+// - Time: O(n)
+// - Space: O(k)

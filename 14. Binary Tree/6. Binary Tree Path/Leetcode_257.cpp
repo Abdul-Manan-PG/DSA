@@ -1,4 +1,15 @@
 // 257. Binary Tree Paths
+// Problem:
+// Given the root of a binary tree, return all root-to-leaf paths in any order.
+//
+// Link: `https://leetcode.com/problems/binary-tree-paths/`
+//
+// Constraints (LeetCode):
+// - The number of nodes in the tree is in the range [1, 100].
+// - -100 <= Node.val <= 100
+//
+// Expected Complexity:
+// - DFS or recursion building strings: Time O(n * L) where L is avg path length; Space O(h)
 
 #include <iostream>
 #include <vector>
@@ -25,6 +36,10 @@ public:
     }
 };
 
+// Solution2 Complexity (DFS with path accumulation):
+// - Time: O(n * L)
+// - Space: O(h)
+
 class Solution1 {
 public:
     vector<string> binaryTreePaths(TreeNode* root) {
@@ -50,3 +65,7 @@ public:
         return ans;
     }
 };
+
+// Solution1 Complexity (Divide-and-conquer):
+// - Time: O(n * L)
+// - Space: O(h)

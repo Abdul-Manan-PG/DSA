@@ -1,4 +1,18 @@
-// 20. Valid parenthesis
+// 20. Valid Parentheses
+// Problem:
+// Given a string s containing just the characters '(', ')', '{', '}', '[' and ']'
+// determine if the input string is valid. An input string is valid if:
+// 1) Open brackets must be closed by the same type of brackets.
+// 2) Open brackets must be closed in the correct order.
+//
+// Link: `https://leetcode.com/problems/valid-parentheses/`
+//
+// Constraints (LeetCode):
+// - 1 <= s.length <= 10^4
+// - s consists of parentheses only
+//
+// Expected Complexity:
+// - Stack-based validation: Time O(n), Space O(n)
 
 #include <iostream>
 #include <stack>
@@ -36,6 +50,10 @@ public:
     }
 };
 
+// Solution1 Complexity (Manual checks with stack):
+// - Time: O(n)
+// - Space: O(n)
+
 class Solution2 
 {
 public:
@@ -63,3 +81,7 @@ public:
         return st.empty();
     }
 };
+
+// Solution2 Complexity (Map + stack):
+// - Time: O(n)
+// - Space: O(n)

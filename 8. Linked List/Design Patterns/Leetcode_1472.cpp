@@ -1,4 +1,20 @@
 // 1472. Design Browser History
+// Problem:
+// Design a browser history system. Implement a class BrowserHistory with:
+// - BrowserHistory(string homepage)
+// - void visit(string url)
+// - string back(int steps)
+// - string forward(int steps)
+//
+// Link: `https://leetcode.com/problems/design-browser-history/`
+//
+// Constraints (LeetCode):
+// - 1 <= homepage.length <= 20
+// - 1 <= url.length <= 20
+// - Total calls to visit, back, forward <= 5000
+//
+// Expected Complexity:
+// - Each operation: O(steps) worst-case for back/forward; O(1) for visit
 
 #include <iostream>
 #include <vector>

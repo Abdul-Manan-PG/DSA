@@ -1,4 +1,17 @@
-// 189. Rotate array
+// 189. Rotate Array
+// Problem:
+// Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+//
+// Link: `https://leetcode.com/problems/rotate-array/`
+//
+// Constraints (LeetCode):
+// - 1 <= nums.length <= 10^5
+// - -2^31 <= nums[i] <= 2^31 - 1
+// - 0 <= k <= 10^5
+//
+// Expected Complexity:
+// - Extra array method: Time O(n), Space O(n)
+// - In-place reverse method: Time O(n), Space O(1)
 
 #include <iostream>
 #include <vector>
@@ -16,6 +29,10 @@ public:
         nums=rotated;
     }
 };
+
+// Solution1 Complexity (Extra array):
+// - Time: O(n)
+// - Space: O(n)
 
 class Solution2 { // Space O(1)
 public:
@@ -43,3 +60,7 @@ public:
         reverse(0, n - 1);
     }
 };
+
+// Solution2 Complexity (Reverse in-place):
+// - Time: O(n)
+// - Space: O(1)

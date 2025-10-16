@@ -1,4 +1,17 @@
-// 61. Rotate the List
+// 61. Rotate List
+// Problem:
+// Given the head of a linked list, rotate the list to the right by k places.
+//
+// Link: `https://leetcode.com/problems/rotate-list/`
+//
+// Constraints (LeetCode):
+// - The number of nodes is in the range [0, 500]
+// - -100 <= Node.val <= 100
+// - 0 <= k <= 2 * 10^9
+//
+// Expected Complexity:
+// - Time: O(n)
+// - Space: O(1)
 
 #include <iostream>
 #include <vector>
@@ -13,6 +26,10 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
+
+// Solution Complexity:
+// - Time: O(n)
+// - Space: O(1)
 
 class Solution {
 public:

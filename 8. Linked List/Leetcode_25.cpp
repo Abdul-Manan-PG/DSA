@@ -1,4 +1,30 @@
-// 25. Reverse Node in K-Groups
+// 25. Reverse Nodes in k-Group
+// Problem:
+// Given the head of a linked list, reverse the nodes of the list k at a time, and
+// return the modified list. k is a positive integer and is less than or equal to
+// the length of the linked list. If the number of nodes is not a multiple of k then
+// the remaining nodes, in the end, should remain as is. You may not alter the values
+// in the list's nodes, only nodes themselves may be changed.
+//
+// Link: `https://leetcode.com/problems/reverse-nodes-in-k-group/`
+//
+// Constraints (LeetCode):
+// - The number of nodes n is in the range [0, 5000].
+// - 0 <= Node.val <= 1000
+// - 1 <= k <= n (when n > 0); behavior for n < k leaves remaining nodes unchanged
+//
+// Expected Complexity:
+// - Time: O(n)
+// - Space: O(1)
+// Sample Test Cases:
+// 1) Input: head = [1,2,3,4,5], k = 2
+//    Output: [2,1,4,3,5]
+// 2) Input: head = [1,2,3,4,5], k = 3
+//    Output: [3,2,1,4,5]
+// 3) Input: head = [1,2,3,4,5], k = 1
+//    Output: [1,2,3,4,5]
+// 4) Input: head = [], k = 2
+//    Output: []
 
 #include <iostream>
 #include <vector>
@@ -16,7 +42,7 @@ struct ListNode {
 };
 
 class Solution {
-public:
+    public:
     ListNode* reverseList(ListNode* head) {
         ListNode* nextNode = nullptr;
         while (head != nullptr) {
@@ -79,3 +105,9 @@ public:
         return head;
     }
 };
+
+//
+// Solution Complexity:
+// - Time: O(n)
+// - Space: O(1)
+//

@@ -1,4 +1,17 @@
-// 315. Count_of_smaller_number_after_self
+// 315. Count of Smaller Numbers After Self
+// Problem:
+// Given an integer array nums, return a new counts array. counts[i] is the number
+// of smaller elements to the right of nums[i].
+//
+// Link: `https://leetcode.com/problems/count-of-smaller-numbers-after-self/`
+//
+// Constraints (LeetCode):
+// - 1 <= nums.length <= 10^5
+// - -10^4 <= nums[i] <= 10^4
+//
+// Expected Complexity (merge sort with indices):
+// - Time: O(n log n)
+// - Space: O(n)
 
 #include <iostream>
 #include <vector>
@@ -57,3 +70,7 @@ vector<int> countSmaller(vector<int>& nums) {
     mergeSort(nums, 0, n - 1, count, index, tempIndex);
     return count;
 }
+
+// Solution Complexity:
+// - Time: O(n log n)
+// - Space: O(n)

@@ -1,4 +1,15 @@
-// Binary Tree Inorder Traversal
+// 94. Binary Tree Inorder Traversal
+// Problem:
+// Given the root of a binary tree, return the inorder traversal of its nodes' values.
+//
+// Link: `https://leetcode.com/problems/binary-tree-inorder-traversal/`
+//
+// Constraints (LeetCode):
+// - The number of nodes in the tree is in the range [0, 100].
+// - -100 <= Node.val <= 100
+//
+// Expected Complexity:
+// - Recursive/Iterative traversal: Time O(n), Space O(n) worst-case
 
 #include <iostream>
 #include <vector>
@@ -13,6 +24,10 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
+
+// Solution1 Complexity (Recursive building vectors):
+// - Time: O(n)
+// - Space: O(n)
 
 class Solution1 {
 public:
@@ -37,6 +52,10 @@ public:
         return ans;
     }
 };
+
+// Solution2 Complexity (Recursive helper):
+// - Time: O(n)
+// - Space: O(n)
 
 class Solution2 {
 public:

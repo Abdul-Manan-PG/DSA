@@ -1,4 +1,17 @@
-// 501. Find the mode in BST
+// 501. Find Mode in Binary Search Tree
+// Problem:
+// Given the root of a binary search tree (BST) with duplicates allowed, return all the mode(s)
+// (i.e., the most frequently occurred element) in the given BST.
+//
+// Link: `https://leetcode.com/problems/find-mode-in-binary-search-tree/`
+//
+// Constraints (LeetCode):
+// - The number of nodes in the tree is in the range [1, 10^4].
+// - -10^5 <= Node.val <= 10^5
+//
+// Expected Complexity:
+// - BFS/HashMap: Time O(n), Space O(n)
+// - Inorder single pass: Time O(n), Space O(h) recursion
 
 #include <iostream>
 #include <vector>
@@ -15,6 +28,10 @@ struct TreeNode
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
+
+// Solution1 Complexity (BFS + HashMap):
+// - Time: O(n)
+// - Space: O(n)
 
 class Solution1 {
 public:
@@ -52,6 +69,10 @@ public:
         return result;
     }
 };
+
+// Solution2 Complexity (Inorder traversal with counters):
+// - Time: O(n)
+// - Space: O(h)
 
 #include <functional>
 

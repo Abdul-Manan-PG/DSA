@@ -1,4 +1,19 @@
-// 23. Merge k sorted Lists
+// 23. Merge k Sorted Lists
+// Problem:
+// You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+// Merge all the linked-lists into one sorted linked-list and return it.
+//
+// Link: `https://leetcode.com/problems/merge-k-sorted-lists/`
+//
+// Constraints (LeetCode):
+// - k == lists.length
+// - 0 <= k <= 10^4
+// - 0 <= lists[i].length <= 500
+// - -10^4 <= lists[i][j] <= 10^4
+//
+// Expected Complexity (pairwise merge shown here):
+// - Time: O(N*k) where N is total number of nodes
+// - Space: O(1) extra (excluding recursion for helper)
 
 #include <iostream>
 #include <vector>
@@ -14,6 +29,10 @@ struct ListNode
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
+
+// Solution Complexity (pairwise merge):
+// - Time: O(N*k)
+// - Space: O(1)
 
 class Solution
 {
