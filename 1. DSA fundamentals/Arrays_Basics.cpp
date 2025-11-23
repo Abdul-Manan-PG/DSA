@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include <string>
 
 using namespace std;
@@ -432,3 +433,33 @@ void deleteElementAtIndex(int nums[], int &n, int X) {
 }
 
 // .....................................................................
+
+// The median of the two sorted array
+
+class Solution {
+public:
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        int n1 = nums1.size(), n2 = nums2.size();
+        int total = n1 + n2;
+        int mid = total / 2;
+
+        int i = 0, j = 0, count = 0;
+        int prev = 0, curr = 0;
+
+        while (count <= mid) {
+            prev = curr;
+
+            if (i < n1 && (j >= n2 || nums1[i] < nums2[j]))
+                curr = nums1[i++];
+            else
+                curr = nums2[j++];
+
+            count++;
+        }
+
+        if (total % 2 == 0)
+            return (prev + curr) / 2.0;
+        else
+            return curr;
+    }
+};
